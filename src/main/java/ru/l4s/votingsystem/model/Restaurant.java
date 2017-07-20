@@ -23,13 +23,13 @@ public class Restaurant extends BaseEntity {
 
     @Column(name = "count_of_votes")
     @NotNull
-    private AtomicInteger countOfVotes;
+    private int countOfVotes;
 
     public Restaurant(Integer id, String name, String address) {
         super(id);
         this.name = name;
         this.address = address;
-        this.countOfVotes = new AtomicInteger(0);
+        this.countOfVotes = 0;
     }
 
     public String getName() {
@@ -40,7 +40,7 @@ public class Restaurant extends BaseEntity {
         return address;
     }
 
-    public AtomicInteger getCountOfVotes() {
+    public int getCountOfVotes() {
         return countOfVotes;
     }
 
@@ -52,7 +52,7 @@ public class Restaurant extends BaseEntity {
         this.address = address;
     }
 
-    public void setCountOfVotes(AtomicInteger countOfVotes) {
+    public void setCountOfVotes(int countOfVotes) {
         this.countOfVotes = countOfVotes;
     }
 

@@ -7,20 +7,20 @@ import java.util.List;
 
 public interface MenuRepository {
     // null if updated menu do not belong to restaurantId
-    Menu save(Menu menu, int restaurantId);
+    ru.l4s.votingsystem.model.Menu save(ru.l4s.votingsystem.model.Menu menu, int restaurantId);
 
     // false if menu do not belong to restaurantId
     boolean delete(int id, int restaurantId);
 
     // null if menu do not belong to restaurantId
-    Menu get(int id, int restaurantId);
+    ru.l4s.votingsystem.model.Menu get(int id, int restaurantId);
 
     // ORDERED date
-    List<Menu> getAll(int restaurantId);
+    List<ru.l4s.votingsystem.model.Menu> getAll(int restaurantId);
 
-    Menu getToday(int restaurantId, LocalDate currentDate);
+    ru.l4s.votingsystem.model.Menu getToday(int restaurantId, LocalDate currentDate);
 
-    default Menu getWithRestaurant(int id, int restaurantId) {
+    default ru.l4s.votingsystem.model.Menu getWithRestaurant(int id, int restaurantId) {
         throw new UnsupportedOperationException();
     }
 }

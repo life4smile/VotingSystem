@@ -6,17 +6,17 @@ import java.util.List;
 
 public interface RestaurantRepository {
 
-    Restaurant save(Restaurant restaurant);
+    ru.l4s.votingsystem.model.Restaurant save(ru.l4s.votingsystem.model.Restaurant restaurant);
 
     // false if not found
     boolean delete(int id);
 
     // null if not found
-    Restaurant get(int id);
+    ru.l4s.votingsystem.model.Restaurant get(int id);
 
-    List<Restaurant> getAll();
+    List<ru.l4s.votingsystem.model.Restaurant> getAll();
 
-    default Restaurant getWithMenu(int id){
+    default ru.l4s.votingsystem.model.Restaurant getWithMenu(int id){
         throw new UnsupportedOperationException();
     }
 

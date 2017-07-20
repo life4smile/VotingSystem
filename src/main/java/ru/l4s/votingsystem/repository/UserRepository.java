@@ -1,18 +1,16 @@
 package ru.l4s.votingsystem.repository;
 
-import ru.l4s.votingsystem.model.User;
-
 import java.util.List;
 
 public interface UserRepository {
 
-    User save(User user);
+    ru.l4s.votingsystem.model.User save(ru.l4s.votingsystem.model.User user);
 
     // false if not found
     boolean delete(int id);
 
     // null if not found
-    User get(int id);
+    ru.l4s.votingsystem.model.User get(int id);
 
-    List<User> getAll();
+    List getAll();
 }

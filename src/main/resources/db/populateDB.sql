@@ -22,7 +22,12 @@ INSERT INTO restaurants (name, address) VALUES
   ('McDonald’s', 'Taganskaya 2'),
   ('Teremok', 'Taganskaya 3');
 
-INSERT INTO menus (date, description, price, restaurant_id) VALUES
+INSERT INTO menus (date_time, description, price, restaurant_id) VALUES
   ('2017-06-05 00:00:00', 'BigMac, CocaCola', 500, 100004),
   ('2017-06-05 00:00:00', 'Borscht, Fruit Water', 1000, 100005);
+
+INSERT INTO likes (user_id, restaurant_id, date_time) VALUES
+  (100001, 100005, '2017-06-05 10:00:00'),
+  (100002, 100005, '2017-06-05 10:30:00'),
+  (100003, 100004, '2017-06-05 10:45:00');
 
